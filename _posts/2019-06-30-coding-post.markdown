@@ -106,7 +106,7 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 5. Kali → CentOS7 : SYN Flag Scanning 탐지
 
 ![Snort 결과 5](/assets/images/synflagattack.PNG)
-![Snort 결과 5](/assets/images/randomattack-detection.PNG)
+![Snort 결과 5](/assets/images/suri-kali-rocky-syn-attack-det.PNG)
 
 ---
 
