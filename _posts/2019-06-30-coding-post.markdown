@@ -5,19 +5,10 @@ description: personal project
 date:   2025-08-11 15:03:36 +0530
 categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 ---
----
-layout: post
-title:  "Network Security Lab"
-date:   2025-08-14 14:00:00 +0900
-categories: Network Security
----
 
 본 프로젝트는 GNS3 환경에서 방화벽, VPN, NIDS, HIDS, 모니터링 툴을 통합 적용하여 다양한 네트워크 보안 시나리오를 실습하고 결과를 정리한 것입니다. 각 항목별로 구성도, 규칙, 실행 결과 캡처를 포함하였습니다.
 
----
-
-## 포폴로지 (Topology)
-![포폴로지](사진_URL "포폴로지")
+![포폴로지](assets/images/개인과제 - 네트워크.PNG)
 
 ---
 
