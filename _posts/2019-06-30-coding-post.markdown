@@ -8,26 +8,28 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 
 본 프로젝트는 GNS3 환경에서 방화벽, VPN, NIDS, HIDS, 모니터링 툴을 통합 적용하여 다양한 네트워크 보안 시나리오를 실습하고 결과를 정리한 것입니다. 각 항목별로 구성도, 규칙, 실행 결과 캡처를 포함하였습니다.
 
-![포폴로지](/assets/images/개인과제 - 네트워크.PNG)
+![GNS3 상세 1](/assets/images/popo.PNG)
 
 ---
 
 ## GNS3 상세
-![GNS3 상세 1](/assets/images/개인과제 - 네트워크 상세.PNG)
-![GNS3 상세 2](사진_URL "GNS3 상세 2")
+
+![GNS3 상세 2](/assets/images/popo2.PNG)
 
 ---
 
 ## Firewall Rule
 
 1. **Firefox3 → inside** : http, telnet 접속  
-   ![결과 1](사진_URL)
-
+- http
+   ![결과 1](/assets/images/fire3-inside-http.PNG)
+- telnet
+   ![결과 1](/assets/images/fire3-inside-telnet.PNG)
 2. **Webterm2 → dmz** : telnet 접속  
-   ![결과 2](사진_URL)
+   ![결과 2](/assets/images/fire5-dmz-telnet.PNG)
 
 3. **PC1 → Webterm1** : ping 가능  
-   ![결과 3](사진_URL)
+   ![결과 3](/assets/images/pc1-fire4-ping.PNG)
 
 4. **Webterm1 → R1** : http, telnet 가능  
    ![결과 4](사진_URL)
