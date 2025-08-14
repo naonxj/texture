@@ -136,7 +136,7 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 4. Kali → Win10 : Rand Source Attack DDoS 탐지
 
 ![Snort 결과 4](/assets/images/surikali-win-randattack2.PNG)
-det
+![Snort 결과 4](/assets/images/surikali-winrandattack.PNG)
 
 5. Kali → CentOS7 : SYN Flag Scanning 탐지
 
