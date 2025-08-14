@@ -35,9 +35,12 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
    ![결과 3](/assets/images/pc1-fire4-ping.PNG)
 
 4. **Webterm1(firefox4) → R1** : http, telnet 가능  
+- http
    ![결과 4](/assets/images/pc1-fire4-ping.PNG)
-
-5. **Webterm2(firefox5) → PC1** : ping 가능  
+- telnet
+   ![결과 4](assets/images/web1(fire4)-r1telnet2222.PNG)
+  
+6. **Webterm2(firefox5) → PC1** : ping 가능  
    ![결과 5](/assets/images/web2(fire5)-pc1-ping-kkk.PNG)
 
 ---
