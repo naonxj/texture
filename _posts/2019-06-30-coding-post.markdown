@@ -24,6 +24,7 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 - http
 
    ![결과 1](/assets/images/fire3-inside-http.PNG)
+  
 - telnet
   
    ![결과 1](/assets/images/fire3-inside-telnet.PNG)
@@ -36,16 +37,20 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 
 4. **Webterm1(firefox4) → R1** : http, telnet 가능  
 - http
-   ![결과 4](/assets/images/web1(fire4)-r1http3333.PNG)
-- telnet
-   ![결과 4](/assets/images/web1(fire4)-r1telnet2222.PNG)
+
+  ![결과 4](/assets/images/web1(fire4)-r1http3333.PNG)
   
-6. **Webterm2(firefox5) → PC1** : ping 가능  
+- telnet
+
+  ![결과 4](/assets/images/web1(fire4)-r1telnet2222.PNG)
+  
+5. **Webterm2(firefox5) → PC1** : ping 가능  
    ![결과 5](/assets/images/web2(fire5)-pc1-ping-kkk.PNG)
 
 ---
 ## HSRP
 1. active
+
 ![결과 5](/assets/images/HSRP-active.PNG)
 
 2. standby
@@ -55,6 +60,7 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 ---
 
 ## openVPN
+
 ![OpenVPN 성공](/assets/images/openvpn.PNG)
 
 ---
@@ -74,9 +80,11 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 1. Win10 → OSSEC : http, ping 탐지  
 
 - http
+
 ![Snort 결과 1](/assets/images/snort(win10-ossec)http.PNG)
 
 -ping
+
 ![Snort 결과 1](/assets/images/snort(win10-ossec)ping-cmd.PNG)
 ![Snort 결과 1](/assets/images/snort(win10-ossec)ping.PNG)
 
@@ -93,9 +101,9 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 4. Kali → Win10 : Rand Source Attack DDoS 탐지
 
 ![Snort 결과 4](/assets/images/random-attack.PNG)
-![Snort 결과 4](/assets/images/random-attack.PNG)
+![Snort 결과 4](/assets/images/kali-winrandattack444444.PNG)
 
-6. Kali → CentOS7 : SYN Flag Scanning 탐지
+5. Kali → CentOS7 : SYN Flag Scanning 탐지
 
 ![Snort 결과 5](/assets/images/synflagattack.PNG)
 ![Snort 결과 5](/assets/images/randomattack-detection.PNG)
@@ -107,11 +115,13 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 1. Win10 → OSSEC : http, ping 탐지  
 
 - ping
+
 ![Snort 결과 1](/assets/images/suriwin-ossec-ping.PNG)
 ![Snort 결과 1](/assets/images/surwin-ossec-pingdetect.PNG)
 
 - http
- ![Snort 결과 1](/assets/images/win-ossechttpdet.PNG)
+
+![Snort 결과 1](/assets/images/win-ossechttpdet.PNG)
 
 2. CentOS7 → Win10 : ping 탐지  
 
@@ -137,13 +147,16 @@ det
 
 ## OSSEC
 **Server**  
+
 ![OSSEC Server](/assets/images/ossecserver.png)
 ![OSSEC Server](/assets/images/ossecserver2.png)
 
 **Agent**  
+
 ![OSSEC Agent](/assets/images/ossecagent.png)
 
 **Windows**  
+
 ![OSSEC Windows](/assets/images/windowossec1.PNG)
 ![OSSEC Windows](/assets/images/windowossec4tail.PNG)
 ![OSSEC Windows](/assets/images/ossecwindowfinal.png)
@@ -152,9 +165,11 @@ det
 
 ## Zabbix
 **Server**  
+
 ![Zabbix Server](/assets/images/zabbixhome.PNG)
 
 **Agent/windows**  
+
 ![Zabbix Agent](/assets/images/zabbixwindowre.PNG)
 
 
