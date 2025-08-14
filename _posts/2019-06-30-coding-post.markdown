@@ -8,12 +8,12 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 
 본 프로젝트는 GNS3 환경에서 방화벽, VPN, NIDS, HIDS, 모니터링 툴을 통합 적용하여 다양한 네트워크 보안 시나리오를 실습하고 결과를 정리한 것입니다. 각 항목별로 구성도, 규칙, 실행 결과 캡처를 포함하였습니다.
 
-![포폴로지](assets/images/개인과제 - 네트워크.PNG)
+![포폴로지](/assets/images/개인과제 - 네트워크.PNG)
 
 ---
 
 ## GNS3 상세
-![GNS3 상세 1](사진_URL "GNS3 상세 1")
+![GNS3 상세 1](/assets/images/개인과제 - 네트워크 상세.PNG)
 ![GNS3 상세 2](사진_URL "GNS3 상세 2")
 
 ---
