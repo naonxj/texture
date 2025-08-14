@@ -22,25 +22,37 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 
 1. **Firefox3 → inside** : http, telnet 접속  
 - http
+
    ![결과 1](/assets/images/fire3-inside-http.PNG)
 - telnet
+  
    ![결과 1](/assets/images/fire3-inside-telnet.PNG)
-2. **Webterm2 → dmz** : telnet 접속  
+  
+2. **Webterm2(firefox5) → dmz** : telnet 접속  
    ![결과 2](/assets/images/fire5-dmz-telnet.PNG)
 
-3. **PC1 → Webterm1** : ping 가능  
+3. **PC1 → Webterm1(firefox4)** : ping 가능  
    ![결과 3](/assets/images/pc1-fire4-ping.PNG)
 
-4. **Webterm1 → R1** : http, telnet 가능  
-   ![결과 4](사진_URL)
+4. **Webterm1(firefox4) → R1** : http, telnet 가능  
+   ![결과 4](/assets/images/pc1-fire4-ping.PNG)
 
-5. **Webterm2 → PC1** : ping 가능  
-   ![결과 5](사진_URL)
+5. **Webterm2(firefox5) → PC1** : ping 가능  
+   ![결과 5](/assets/images/web2(fire5)-pc1-ping-kkk.PNG)
+
+---
+## HSRP
+1. active
+![결과 5](/assets/images/HSRP-active.PNG)
+
+2. standby
+
+![결과 5](/assets/images/HSRP-standby.PNG)
 
 ---
 
 ## openVPN
-![OpenVPN 성공](사진_URL)
+![OpenVPN 성공](/assets/images/openvpn.PNG)
 
 ---
 
@@ -55,44 +67,93 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 ---
 
 ## SNORT 실행 결과
-![Snort 결과 1](사진_URL)
-![Snort 결과 2](사진_URL)
-![Snort 결과 3](사진_URL)
-![Snort 결과 4](사진_URL)
-![Snort 결과 5](사진_URL)
+
+1. Win10 → OSSEC : http, ping 탐지  
+
+- http
+![Snort 결과 1](/assets/images/snort(win10-ossec)http.PNG)
+
+-ping
+![Snort 결과 1](/assets/images/snort(win10-ossec)ping-cmd.PNG)
+![Snort 결과 1](/assets/images/snort(win10-ossec)ping.PNG)
+
+2. CentOS7 → Win10 : ping 탐지  
+
+![Snort 결과 2](/assets/images/rocky-win-ping.PNG)
+![Snort 결과 2](/assets/images/rocky-win-ping-result.PNG)
+
+3. HIDS → CentOS7 : `/etc/passwd` command injection 공격 탐지
+
+![Snort 결과 3](/assets/images/rockinjectcurl.PNG)
+![Snort 결과 3](/assets/images/rockyinjectiondetc.PNG)
+
+4. Kali → Win10 : Rand Source Attack DDoS 탐지
+
+![Snort 결과 4](/assets/images/random-attack.PNG)
+![Snort 결과 4](/assets/images/random-attack.PNG)
+
+6. Kali → CentOS7 : SYN Flag Scanning 탐지
+
+![Snort 결과 5](/assets/images/synflagattack.PNG)
+![Snort 결과 5](/assets/images/randomattack-detection.PNG)
 
 ---
 
 ## Suricata 실행 결과
-![Suricata 결과 1](사진_URL)
-![Suricata 결과 2](사진_URL)
-![Suricata 결과 3](사진_URL)
-![Suricata 결과 4](사진_URL)
-![Suricata 결과 5](사진_URL)
+
+1. Win10 → OSSEC : http, ping 탐지  
+
+- ping
+![Snort 결과 1](/assets/images/suriwin-ossec-ping.PNG)
+![Snort 결과 1](/assets/images/surwin-ossec-pingdetect.PNG)
+
+- http
+ ![Snort 결과 1](/assets/images/win-ossechttpdet.PNG)
+
+2. CentOS7 → Win10 : ping 탐지  
+
+![Snort 결과 2](/assets/images/surirocky-win-ping.PNG)
+![Snort 결과 2](/assets/images/surirocky-winping-det.PNG)
+
+3. HIDS → CentOS7 : `/etc/passwd` command injection 공격 탐지
+
+![Snort 결과 3](/assets/images/suri-injection-attack.PNG)
+![Snort 결과 3](/assets/images/suri-injection-detec.PNG)
+
+4. Kali → Win10 : Rand Source Attack DDoS 탐지
+
+![Snort 결과 4](/assets/images/surikali-win-randattack2.PNG)
+det
+
+5. Kali → CentOS7 : SYN Flag Scanning 탐지
+
+![Snort 결과 5](/assets/images/surikali-rocky-synattack.PNG)
+![Snort 결과 5](/assets/images/suri-kali-rocky-syn-attack-det.PNG)
 
 ---
 
 ## OSSEC
 **Server**  
-![OSSEC Server](사진_URL)
+![OSSEC Server](/assets/images/ossecserver.png)
+![OSSEC Server](/assets/images/ossecserver2.png)
 
 **Agent**  
-![OSSEC Agent](사진_URL)
+![OSSEC Agent](/assets/images/ossecagent.png)
 
 **Windows**  
-![OSSEC Windows](사진_URL)
+![OSSEC Windows](/assets/images/windowossec1.PNG)
+![OSSEC Windows](/assets/images/windowossec4tail.PNG)
+![OSSEC Windows](/assets/images/ossecwindowfinal.png)
 
 ---
 
 ## Zabbix
 **Server**  
-![Zabbix Server](사진_URL)
+![Zabbix Server](/assets/images/zabbixhome.PNG)
 
-**Agent**  
-![Zabbix Agent](사진_URL)
+**Agent/windows**  
+![Zabbix Agent](/assets/images/zabbixwindowre.PNG)
 
-**Windows**  
-![Zabbix Windows](사진_URL)
 
 ---
 
