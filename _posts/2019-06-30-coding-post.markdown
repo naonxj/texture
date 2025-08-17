@@ -172,9 +172,6 @@ categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
 
 ![Zabbix Agent]({{ site.baseurl }}/assets/images/zabbixwindowre.PNG)
 
----
-
-*본 페이지의 모든 이미지는 클릭하면 원본 크기로 볼 수 있습니다.*
 
 
 ---
