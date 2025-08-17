@@ -1,0 +1,203 @@
+---
+layout: page
+title: "NETWORK SECURITY PROJECT"
+description: /personal project/
+date:   2025-08-11 15:03:36 +0530
+categories: GNS3 pfSense Rocky Ubuntu kali OSSEC ZABBIX
+---
+<h1>NETWORK SECURITY PROJECT</h1>
+<p>
+  본 프로젝트는 GNS3 환경에서 방화벽, VPN, NIDS, HIDS, 모니터링 툴을 통합 적용하여 다양한 네트워크 보안 시나리오를 실습하고 결과를 정리한 것입니다.
+  각 항목별로 구성도, 규칙, 실행 결과 캡처를 포함하였습니다.
+</p>
+
+<h2>GNS3 상세</h2>
+<img src="/assets/images/popo.PNG" alt="GNS3 상세 1" class="thumbnail">
+<img src="/assets/images/popo2.PNG" alt="GNS3 상세 2" class="thumbnail">
+
+<hr>
+
+<h2>Firewall Rule</h2>
+<ol>
+  <li>
+    <strong>Firefox3 → inside : http, telnet 접속</strong><br>
+    http <img src="/assets/images/fire3-inside-http.PNG" alt="결과 1" class="thumbnail">
+    telnet <img src="/assets/images/fire3-inside-telnet.PNG" alt="결과 1" class="thumbnail">
+  </li>
+  <li>
+    <strong>Webterm2(firefox5) → dmz : telnet 접속</strong><br>
+    <img src="/assets/images/fire5-dmz-telnet.PNG" alt="결과 2" class="thumbnail">
+  </li>
+  <li>
+    <strong>PC1 → Webterm1(firefox4) : ping 가능</strong><br>
+    <img src="/assets/images/pc1-fire4-ping.PNG" alt="결과 3" class="thumbnail">
+  </li>
+  <li>
+    <strong>Webterm1(firefox4) → R1 : http, telnet 가능</strong><br>
+    http <img src="/assets/images/web1(fire4)-r1http3333.PNG" alt="결과 4" class="thumbnail">
+    telnet <img src="/assets/images/web1(fire4)-r1telnet2222.PNG" alt="결과 4" class="thumbnail">
+  </li>
+  <li>
+    <strong>Webterm2(firefox5) → PC1 : ping 가능</strong><br>
+    <img src="/assets/images/web2(fire5)-pc1-ping-kkk.PNG" alt="결과 5" class="thumbnail">
+  </li>
+</ol>
+
+<hr>
+
+<h2>HSRP</h2>
+<strong>active</strong><br>
+<img src="/assets/images/HSRP-active.PNG" alt="결과 5" class="thumbnail"><br>
+<strong>standby</strong><br>
+<img src="/assets/images/HSRP-standby.PNG" alt="결과 5" class="thumbnail">
+
+<hr>
+
+<h2>openVPN</h2>
+<img src="/assets/images/openvpn.PNG" alt="OpenVPN 성공" class="thumbnail">
+
+<hr>
+
+<h2>Snort / Suricata Rule</h2>
+<ol>
+  <li>Win10 → OSSEC : http, ping 탐지</li>
+  <li>CentOS7 → Win10 : ping 탐지</li>
+  <li>HIDS → CentOS7 : <code>/etc/passwd</code> command injection 공격 탐지</li>
+  <li>Kali → Win10 : Rand Source Attack DDoS 탐지</li>
+  <li>Kali → CentOS7 : SYN Flag Scanning 탐지</li>
+</ol>
+
+<hr>
+
+<h2>SNORT 실행 결과</h2>
+<strong>1. Win10 → OSSEC : http, ping 탐지</strong><br>
+http <img src="/assets/images/snort(win10-ossec)http.PNG" alt="Snort 결과 1" class="thumbnail"><br>
+ping <img src="/assets/images/snort(win10-ossec)ping-cmd.PNG" alt="Snort 결과 1" class="thumbnail">
+<img src="/assets/images/snort(win10-ossec)ping.PNG" alt="Snort 결과 1" class="thumbnail">
+
+<strong>2. CentOS7 → Win10 : ping 탐지</strong><br>
+<img src="/assets/images/rocky-win-ping.PNG" alt="Snort 결과 2" class="thumbnail">
+<img src="/assets/images/rocky-win-ping-result.PNG" alt="Snort 결과 2" class="thumbnail">
+
+<strong>3. HIDS → CentOS7 : 공격 탐지</strong><br>
+<img src="/assets/images/rockinjectcurl.PNG" alt="Snort 결과 3" class="thumbnail">
+<img src="/assets/images/rockyinjectiondetc.PNG" alt="Snort 결과 3" class="thumbnail">
+
+<strong>4. Kali → Win10 : Rand Source Attack DDoS 탐지</strong><br>
+<img src="/assets/images/random-attack.PNG" alt="Snort 결과 4" class="thumbnail">
+<img src="/assets/images/kali-winrandattack444444.PNG" alt="Snort 결과 4" class="thumbnail">
+
+<strong>5. Kali → CentOS7 : SYN Flag Scanning 탐지</strong><br>
+<img src="/assets/images/synflagattack.PNG" alt="Snort 결과 5" class="thumbnail">
+<img src="/assets/images/suri-kali-rocky-syn-attack-det.PNG" alt="Snort 결과 5" class="thumbnail">
+
+<hr>
+
+<h2>Suricata 실행 결과</h2>
+<strong>1. Win10 → OSSEC : http, ping 탐지</strong><br>
+ping <img src="/assets/images/suriwin-ossec-ping.PNG" alt="Suricata 결과" class="thumbnail">
+<img src="/assets/images/surwin-ossec-pingdetect.PNG" alt="Suricata 결과" class="thumbnail"><br>
+http <img src="/assets/images/win-ossechttpdet.PNG" alt="Suricata 결과" class="thumbnail">
+
+<strong>2. CentOS7 → Win10 : ping 탐지</strong><br>
+<img src="/assets/images/surirocky-win-ping.PNG" alt="Suricata 결과" class="thumbnail">
+<img src="/assets/images/surirocky-winping-det.PNG" alt="Suricata 결과" class="thumbnail">
+
+<strong>3. HIDS → CentOS7 : 공격 탐지</strong><br>
+<img src="/assets/images/suri-injection-attack.PNG" alt="Suricata 결과" class="thumbnail">
+<img src="/assets/images/suri-injection-detec.PNG" alt="Suricata 결과" class="thumbnail">
+
+<strong>4. Kali → Win10 : Rand Source Attack DDoS 탐지</strong><br>
+<img src="/assets/images/surikali-win-randattack2.PNG" alt="Suricata 결과" class="thumbnail">
+<img src="/assets/images/surikali-winrandattack.PNG" alt="Suricata 결과" class="thumbnail">
+
+<strong>5. Kali → CentOS7 : SYN Flag Scanning 탐지</strong><br>
+<img src="/assets/images/surikali-rocky-synattack.PNG" alt="Suricata 결과" class="thumbnail">
+<img src="/assets/images/suri-kali-rocky-syn-attack-det.PNG" alt="Suricata 결과" class="thumbnail">
+
+<hr>
+
+<h2>OSSEC</h2>
+<strong>Server</strong><br>
+<img src="/assets/images/ossecserver.png" alt="OSSEC Server" class="thumbnail">
+<img src="/assets/images/ossecserver2.png" alt="OSSEC Server" class="thumbnail"><br>
+<strong>Agent</strong><br>
+<img src="/assets/images/ossecagent.png" alt="OSSEC Agent" class="thumbnail"><br>
+<strong>Windows</strong><br>
+<img src="/assets/images/windowossec1.PNG" alt="OSSEC Windows" class="thumbnail">
+<img src="/assets/images/windowossec4tail.PNG" alt="OSSEC Windows" class="thumbnail">
+<img src="/assets/images/ossecwindowfinal.png" alt="OSSEC Windows" class="thumbnail">
+
+<hr>
+
+<h2>Zabbix</h2>
+<strong>Server</strong><br>
+<img src="/assets/images/zabbixhome.PNG" alt="Zabbix Server" class="thumbnail"><br>
+<strong>Agent/windows</strong><br>
+<img src="/assets/images/zabbixwindowre.PNG" alt="Zabbix Agent" class="thumbnail">
+
+<hr>
+
+<p><em>본 페이지의 모든 이미지는 클릭하면 원본 크기로 볼 수 있습니다.</em></p>
+
+<style>
+.thumbnail {
+  max-width: 200px;
+  height: auto;
+  cursor: pointer;
+  margin: 5px;
+  border: 1px solid #ccc;
+  transition: transform 0.2s;
+}
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.9);
+}
+.lightbox img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+}
+.close {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  thumbnails.forEach(img => {
+    img.addEventListener("click", function() {
+      const lightbox = document.createElement("div");
+      lightbox.classList.add("lightbox");
+      lightbox.innerHTML = `
+        <a href="#" class="close">&times;</a>
+        <img src="${img.src}" alt="${img.alt}">
+      `;
+      document.body.appendChild(lightbox);
+      lightbox.style.display = "block";
+      lightbox.querySelector(".close").addEventListener("click", function(e) {
+        e.preventDefault();
+        lightbox.remove();
+      });
+    });
+  });
+});
+</script>
